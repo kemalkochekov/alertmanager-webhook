@@ -1,0 +1,10 @@
+groups:
+  - name: example
+    rules:
+      - alert: HighOperation
+        expr: myapp_processed_operations_total > 5
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: High operation rate detected
